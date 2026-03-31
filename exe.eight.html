@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 8</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-10">
+    <h2 class="text-xl font-bold text-gray-800 mb-4">Fruit List</h2>
+
+    <ul id="fruitList" class="space-y-2"></ul>
+
+    <script>
+      // 1. Select the <ul>
+      const fruitList = document.querySelector("#fruitList");
+
+      // 2. Loop through the array
+      fruits.forEach(function (fruit) {
+        // 3a. Create <li>
+        const li = document.createElement("li");
+
+        // 3b. Set text
+        li.textContent = fruit;
+
+        // 3c. Add classes
+        li.classList.add(
+          "bg-gray-100",
+          "rounded-lg",
+          "px-4",
+          "py-2",
+          "text-gray-700",
+          "text-sm",
+        );
+
+        // 3d. Append to <ul>
+        fruitList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
